@@ -1,0 +1,24 @@
+# Backend - Hệ thống nhận diện URL độc hại
+#
+# Cài đặt (khuyến nghị dùng Python 3.11+):
+#   python -m venv .venv
+#   .venv\Scripts\activate          (Windows)
+#   pip install -r backend/requirements.txt
+#
+# Chạy server (từ thư mục gốc dự án):
+#   uvicorn backend.app:app --reload --host 127.0.0.1 --port 8000
+
+fastapi>=0.115
+uvicorn[standard]>=0.30
+pydantic>=2.7
+torch>=2.2
+transformers>=4.40
+requests>=2.31
+certifi>=2024.2
+tldextract>=5.1
+idna>=3.6
+numpy>=1.26
+
+# Tùy chọn: thông tin đăng ký domain (WHOIS).
+# Nếu không cài, API vẫn hoạt động và trả về whois.available = false.
+python-whois>=0.9
